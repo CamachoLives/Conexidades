@@ -14,7 +14,11 @@ export class Conexidades {
 
   Usuario = 'Administrador'
   today: string;
-
+  identificacion = '860037422'
+  razonSocial = 'Incocrédito - Asociación sin ánimo de lucro'
+  correo = 'Conexiones@incocredito.com'
+  listaRiesgo = 'N/A'
+  listaRestrictiva = 'N/A'
   
 constructor() {
     const hoy = new Date();

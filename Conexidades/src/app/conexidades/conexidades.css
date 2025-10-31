@@ -52,6 +52,7 @@ body {
 /* Formulario */
 .form-container {
   background: #fff;
+  border: 1px solid #333;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -124,6 +125,50 @@ body {
   background: #ffc107;
   color: #fff;
   transform: scale(1.05);
+}
+
+.info-box {
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.info-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #28a745;
+  padding-bottom: 5px;
+  color: #333;
+}
+
+.info-content p {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #444;
+}
+
+.info-content strong {
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .info-box {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .info-title {
+    font-size: 18px;
+  }
+
+  .info-content p {
+    font-size: 14px;
+  }
 }
 
 /* ✅ RESPONSIVE */
