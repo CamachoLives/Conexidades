@@ -1,0 +1,188 @@
+/* Global */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #28a74520, #28a74505);
+  min-height: 100vh;
+  overflow-x: hidden; /* ✅ Evita scroll horizontal */
+}
+
+/* Header */
+.header-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* ✅ Para que se acomode en pantallas pequeñas */
+}
+
+.title {
+  color: #28a745;
+  font-size: 44px;
+  font-weight: bold;
+}
+
+.user-info {
+  border: 1px solid #000;
+  text-align: center;
+  max-width: 420px; /* ✅ Cambiado de width a max-width */
+  width: 100%; /* ✅ Para que se ajuste en móviles */
+  padding: 10px;
+}
+
+.user-info p {
+  margin: 3px 0;
+  line-height: 1.2;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 50px;
+  max-width: 100%; /* ✅ Evita que se desborde */
+}
+
+/* Formulario */
+.form-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 900px;
+  width: 95%; /* ✅ Ajuste para pantallas pequeñas */
+  margin: 20px auto;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px 20px;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.full-width {
+  grid-column: span 3;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  gap: 15px;
+  flex-wrap: wrap; /* ✅ Para evitar desbordes */
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-search {
+  border: 2px solid #28a745;
+  color: #28a745;
+  background: #fff;
+}
+
+.btn-search:hover {
+  background: #28a745;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.btn-report {
+  border: 2px solid #ffc107;
+  color: #ffc107;
+  background: #fff;
+}
+
+.btn-report:hover {
+  background: #ffc107;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ✅ RESPONSIVE */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .user-info {
+    max-width: 300px;
+  }
+
+  .logo img {
+    margin-right: 20px;
+    height: 50px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .user-info {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .logo img {
+    margin: 0 auto;
+    height: 45px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 18px;
+  }
+}
