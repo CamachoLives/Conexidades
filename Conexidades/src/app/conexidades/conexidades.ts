@@ -2,20 +2,20 @@ import { Component, AfterViewInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatTableModule, MatTableDataSource } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-conexidades',
-  standalone: true, // ✅ Si es standalone
+  standalone: true, 
   imports: [
     CommonModule,
     RouterModule,
     MatTableModule,
-    MatPaginator,
-    MatSort,
-    MatTabsModule
+    MatTabsModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   templateUrl: './conexidades.html',
   styleUrls: ['./conexidades.css'] // ✅ corregido
