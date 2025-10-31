@@ -5,6 +5,8 @@ import { MatTableModule, MatTableDataSource } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-conexidades',
@@ -15,10 +17,12 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatTableModule,
     MatTabsModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   templateUrl: './conexidades.html',
-  styleUrls: ['./conexidades.css'] // ✅ corregido
+  styleUrls: ['./conexidades.css'] 
 })
 export class Conexidades implements AfterViewInit {
   Usuario = 'Administrador';
@@ -42,11 +46,15 @@ export class Conexidades implements AfterViewInit {
     const anio = hoy.getFullYear();
     this.today = `${dia}/${mes}/${anio}`;
   }
-
+applyFilter(event: Event) {
+  const filterValue = (event.target as HTMLInputElement).value;
+  this.dataSource.filter = filterValue.trim().toLowerCase();
+}
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
+  
 }
 
 export interface Comercio {
@@ -74,3 +82,7 @@ const ELEMENT_DATA: Comercio[] = [
   { nombre: 'Comercio 16', categoria: 'Servicios', ciudad: 'Barrancabermeja' },
 
 ];
+
+
+
+

@@ -64,6 +64,12 @@
 <div class="table-container">
   <h3 class="table-title">Comercios</h3>
 
+<!-- Campo de búsqueda -->
+  <mat-form-field appearance="outline" style="width: 300px;">
+    <mat-label>Buscar</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Escribe para filtrar">
+  </mat-form-field>
+
   <!-- Tabla -->
   <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 
